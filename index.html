@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="inflow">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <!-- <link rel="icon" type="image/png" href="favicon.png"/> -->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <title>InFlow</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "1445719933";
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+
+  <script src="main.dart.js" type="application/javascript"></script>
+  <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyBPAFJ6pruBb3G_hWMO40LqdO_wzlDlzWM",
+        authDomain: "inflow-10b1e.firebaseapp.com",
+        databaseURL: "https://inflow-10b1e-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "inflow-10b1e",
+        storageBucket: "inflow-10b1e.appspot.com",
+        messagingSenderId: "561536269283",
+        appId: "1:561536269283:web:772753ae3b3be57c9e7ed6",
+        measurementId: "G-R5M21XY4H8"
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+
+  </script>
+  <script type="text/javascript">
+    window.flutterWebRenderer = "html";
+
+  </script>
+</body>
+</html>
